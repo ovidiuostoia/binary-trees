@@ -23,7 +23,7 @@ class Node:
     def __repr__(self) -> str:
         return self.__str__()
 
-def main():
+def get_tree() -> Node:
     a = Node('a')
     b = Node('b')
     c = Node('c')
@@ -37,7 +37,11 @@ def main():
     b.right = e
     c.right = f
 
-    # print(a)
+    return a
+
+def main():
+    a = get_tree()
+    print(a)
 
 
 if __name__ == "__main__":

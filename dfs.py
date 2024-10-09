@@ -1,4 +1,4 @@
-from node import Node
+from node import Node, get_tree
 
 def dfsPrint(src: Node) -> None:
     if src == None:
@@ -31,7 +31,7 @@ def dfs(src: Node) -> list:
         res.append(current)
         for child in current.getChildren():
             stack.append(child)
-            
+
     return res
 
 def dfsr(src: Node) -> list:
@@ -43,18 +43,7 @@ def dfsr(src: Node) -> list:
     return [src, *left, *right]
 
 def main():
-    a = Node('a')
-    b = Node('b')
-    c = Node('c')
-    d = Node('d')
-    e = Node('e')
-    f = Node('f')
-
-    a.left = b
-    a.right = c
-    b.left = d
-    b.right = e
-    c.right = f
+    a = get_tree()
 
     # print("DFS Traversal:")
     # dfsPrint(a)  # acfbed

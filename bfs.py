@@ -1,4 +1,4 @@
-from node import Node
+from node import Node, get_tree
 
 def bfs(src: Node) -> list:
     if src == None:
@@ -15,18 +15,7 @@ def bfs(src: Node) -> list:
     return res
 
 def main():
-    a = Node('a')
-    b = Node('b')
-    c = Node('c')
-    d = Node('d')
-    e = Node('e')
-    f = Node('f')
-
-    a.left = b
-    a.right = c
-    b.left = d
-    b.right = e
-    c.right = f
+    a = get_tree()
 
     print(bfs(a))
 
