@@ -39,6 +39,38 @@ def get_tree() -> Node:
 
     return a
 
+def get_tree_numeral() -> Node:
+    a = Node(3)
+    b = Node(11)
+    c = Node(4)
+    d = Node(4)
+    e = Node(2)
+    f = Node(1)
+
+    a.left = b
+    a.right = c
+    b.left = d
+    b.right = e
+    c.right = f
+
+    return a
+
+def get_tree_numeral2() -> Node:
+    a = Node(5)
+    b = Node(11)
+    c = Node(3)
+    d = Node(4)
+    e = Node(2)
+    f = Node(1)
+
+    a.left = b
+    a.right = c
+    b.left = d
+    b.right = e
+    c.right = f
+
+    return a
+
 def main():
     a = get_tree()
     print(a)
